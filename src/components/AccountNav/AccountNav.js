@@ -1,11 +1,14 @@
 import { Link, navigate } from 'gatsby';
-import React from 'react';
+import React, {useContext} from 'react';
+import { AuthContext } from '../../context/AuthProvider';
 import * as styles from './AccountNav.module.css';
 
 const AccountNav = (props) => {
+  const ctx = useContext(AuthContext);
   const handleLogout = () => {
-    window.localStorage.removeItem('key');
-    navigate('/');
+    ctx.logout();
+    //window.localStorage.removeItem('key');
+    //navigate('/');
   };
 
   return (

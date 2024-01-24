@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, navigate } from 'gatsby';
 import { validateEmail, isEmpty } from '../helpers/general';
 import * as styles from './login.module.css';
@@ -7,6 +7,7 @@ import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
 import Layout from '../components/Layout/Layout';
 import FormInputField from '../components/FormInputField/FormInputField';
 import Button from '../components/Button';
+import { AuthContext } from '../context/AuthProvider';
 
 const LoginPage = (props) => {
   const initialState = {
@@ -23,11 +24,18 @@ const LoginPage = (props) => {
   const [errorForm, setErrorForm] = useState(errorState);
   const [errorMessage, setErrorMessage] = useState('');
 
+  const ctx = useContext(AuthContext);
+
   const handleChange = (id, e) => {
     const tempForm = { ...loginForm, [id]: e };
     setLoginForm(tempForm);
   };
-
+  const onError = () => {
+    window.scrollTo(0, 0);
+        setErrorMessage(
+          'There is no such account associated with this email address'
+        );
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     let validForm = true;
@@ -53,13 +61,9 @@ const LoginPage = (props) => {
 
       //mock login
       if (loginForm.email !== 'error@example.com') {
-        navigate('/account');
-        window.localStorage.setItem('key', 'sampleToken');
+        ctx.login(loginForm.email, loginForm.password, onError);
       } else {
-        window.scrollTo(0, 0);
-        setErrorMessage(
-          'There is no such account associated with this email address'
-        );
+        onError();
       }
     } else {
       setErrorMessage('');
