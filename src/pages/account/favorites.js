@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './favorites.module.css';
 
@@ -10,6 +10,8 @@ import Layout from '../../components/Layout/Layout';
 import Modal from '../../components/Modal';
 
 import { isAuth } from '../../helpers/general';
+
+import AuthContext from '../../context/AuthProvider';
 
 const FavoritesPage = (props) => {
   const sampleFavorite1 = {
@@ -33,7 +35,9 @@ const FavoritesPage = (props) => {
     alt: 'favorite 3',
   };
 
-  if (isAuth() === false) {
+  const ctx = useContext(AuthContext);
+
+  if (isAuth(ctx) === false) {
     navigate('/login');
   }
 

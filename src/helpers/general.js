@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { AuthContext } from "../context/AuthProvider";
 /**
  * Is value numeric
  * 
@@ -70,8 +68,7 @@ function isEmpty(input) {
 
     isAuth()
  */
-function isAuth() {
-  const ctx = useContext(AuthContext);
+function isAuth(ctx) {
   return ctx.state?.authenitficated;
   const isBrowser = typeof window !== 'undefined';
   if (isBrowser) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './settings.module.css';
 
@@ -8,6 +8,8 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import FormInputField from '../../components/FormInputField';
 import Layout from '../../components/Layout/Layout';
 
+import AuthContext from '../../context/AuthProvider';
+
 import {
   validateEmail,
   validateStrongPassword,
@@ -15,7 +17,8 @@ import {
 } from '../../helpers/general';
 
 const SettingsPage = (props) => {
-  if (isAuth() === false) {
+  const ctx = useContext(AuthContext);
+  if (isAuth(ctx) === false) {
     navigate('/login');
   }
 

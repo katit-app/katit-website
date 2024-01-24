@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './viewed.module.css';
 
@@ -9,11 +9,12 @@ import ProductCardGrid from '../../components/ProductCardGrid';
 
 import { isAuth } from '../../helpers/general';
 import { generateMockProductData } from '../../helpers/mock';
+import AuthContext from '../../context/AuthProvider';
 
 const RecentlyViewedPage = (props) => {
   const recentlyViewed = generateMockProductData(3, 'shirt');
-
-  if (isAuth() === false) {
+  const ctx = useContext(AuthContext);
+  if (isAuth(ctx) === false) {
     navigate('/login');
   }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from 'react';
+import React, { useState, useEffect, createRef, useContext } from 'react';
 import { Link, navigate } from 'gatsby';
 
 import { isAuth } from '../../helpers/general';
@@ -13,6 +13,7 @@ import FormInputField from '../FormInputField/FormInputField';
 import Icon from '../Icons/Icon';
 import MiniCart from '../MiniCart';
 import MobileNavigation from '../MobileNavigation';
+import AuthContext from '../../context/AuthProvider';
 import * as styles from './Header.module.css';
 
 const Header = (prop) => {
@@ -25,6 +26,8 @@ const Header = (prop) => {
 
   const [showSearch, setShowSearch] = useState(false);
   const [search, setSearch] = useState('');
+
+  const ctx = useContext(AuthContext);
 
   const searchRef = createRef();
   const bannerMessage = 'Free shipping worldwide';
@@ -137,7 +140,7 @@ const Header = (prop) => {
             </Link>
             <Link
               aria-label="Orders"
-              href={isAuth() ? '/login' : '/account/orders/'}
+              href={isAuth(ctx) ? '/login' : '/account/orders/'}
               className={`${styles.iconContainer} ${styles.hideOnMobile}`}
             >
               <Icon symbol={'user'}></Icon>

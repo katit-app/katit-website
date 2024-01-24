@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 import GoTrue from 'gotrue-js';
 
 const auth = new GoTrue({
@@ -15,7 +15,7 @@ const defaultState = {
 
 export const AuthContext = createContext(defaultState);
 
-export const AuthProvider = ({ children }) => {
+export const AuthContextProvider = ({ children }) => {
   const [state, setState] = useState(defaultState);
 
   const login = (email, password, onError) => {
@@ -26,7 +26,6 @@ export const AuthProvider = ({ children }) => {
             navigate('/account');
         })
         .catch((error) => onError(JSON.stringify(error)));
-    setState({ ...state, user: user, authentificated: true });
   };
 
   const logout = () => {
@@ -67,7 +66,7 @@ export const AuthProvider = ({ children }) => {
         setState,
         login,
         logout,
-        getUser,
+        signup,
       }}
     >
       {children}
@@ -75,4 +74,4 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export default NotificationContext;
+export default AuthContext;

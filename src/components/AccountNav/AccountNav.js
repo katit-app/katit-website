@@ -1,4 +1,4 @@
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import React, {useContext} from 'react';
 import { AuthContext } from '../../context/AuthProvider';
 import * as styles from './AccountNav.module.css';

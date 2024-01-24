@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import * as styles from './orders.module.css';
 
 import AccountLayout from '../../components/AccountLayout/AccountLayout';
@@ -6,10 +6,12 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import Layout from '../../components/Layout/Layout';
 import OrderItem from '../../components/OrderItem/OrderItem';
 import { isAuth } from '../../helpers/general';
+import AuthContext from '../../context/AuthProvider';
 import { navigate } from 'gatsby';
 
 const OrderPage = (props) => {
-  if (isAuth() === false) {
+  const ctx = useContext(AuthContext);
+  if (isAuth(ctx) === false) {
     navigate('/login');
   }
 

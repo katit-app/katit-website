@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, navigate } from 'gatsby';
 
 import Config from '../../config.json';
 import Icon from '../Icons/Icon';
 import { isAuth } from '../../helpers/general';
-
+import AuthContext from '../../context/AuthProvider';
 //TO DO: refactor this to handle multiple nested links to avoid hardcoding 'depth'
 // have to restructure config.json
 // refactor this
@@ -18,6 +18,8 @@ const MobileNavigation = (props) => {
   const [category, setCategory] = useState();
   const [depth, setDepth] = useState(0);
 
+  const ctx = useContext(AuthContext);
+
   const handleLogout = () => {
     window.localStorage.removeItem('key');
     navigate('/');
@@ -28,14 +30,14 @@ const MobileNavigation = (props) => {
     <div className={styles.root}>
       <nav>
         <div className={styles.headerAuth}>
-          {depth === 0 && isAuth() === false && (
+          {depth === 0 && isAuth(ctx) === false && (
             <div className={styles.authLinkContainer}>
               <Link to={'/signup'}>Sign Up</Link>
               <Link to={'/login'}>Login</Link>
             </div>
           )}
 
-          {depth === 0 && isAuth() === true && (
+          {depth === 0 && isAuth(ctx) === true && (
             <div
               className={styles.welcomeContainer}
               role={'presentation'}
@@ -46,7 +48,7 @@ const MobileNavigation = (props) => {
             </div>
           )}
 
-          {depth === -1 && isAuth() === true && (
+          {depth === -1 && isAuth(ctx) === true && (
             <div
               className={styles.previousLinkContainer}
               onClick={() => setDepth(0)}

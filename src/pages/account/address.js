@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './address.module.css';
 
@@ -12,6 +12,7 @@ import Modal from '../../components/Modal';
 
 import { isAuth } from '../../helpers/general';
 import Button from '../../components/Button';
+import AuthContext from '../../context/AuthProvider';
 
 const AddressPage = (props) => {
   const address1 = {
@@ -36,7 +37,9 @@ const AddressPage = (props) => {
   const [showForm, setShowForm] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
 
-  if (isAuth() === false) {
+  const ctx = useContext(AuthContext);
+
+  if (isAuth(ctx) === false) {
     navigate('/login');
   }
 
