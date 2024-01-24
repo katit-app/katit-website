@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import { Link, navigate } from 'gatsby';
 import GoTrue from 'gotrue-js';
 
-auth = new GoTrue({
+const auth = new GoTrue({
     APIUrl: 'https://peppy-pixie-2d0b01/.netlify/identity',
     audience: '',
     setCookie: false,
@@ -41,6 +41,16 @@ export const AuthProvider = ({ children }) => {
       throw error;
     });
   };
+
+  const signup = (email, password) => {
+    auth
+        .signup(email, password)
+        .then((response) => {
+            console.log('Confirmation email sent', response);
+            navigate('/accountSuccess');
+    })
+        .catch((error) => console.log("It's an error", error));
+  }
 
   useEffect(() => {
     if (state?.open === true) {
