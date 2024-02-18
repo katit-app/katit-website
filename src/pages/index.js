@@ -21,7 +21,7 @@ const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
   const ctx = useContext(AuthContext);
-  const hash = window.location.hash;
+  const hash = typeof window !== "undefined" ? window.location.hash : "";
   if (hash?.length > 0) {
     ctx.confirm(hash.split("token=").pop());
   }
