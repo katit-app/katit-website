@@ -140,7 +140,7 @@ const Header = (prop) => {
             </Link>
             <Link
               aria-label="Orders"
-              href={isAuth(ctx) ? '/login' : '/account/orders/'}
+              href={isAuth(ctx) ? '/account/orders/' : '/login'}
               className={`${styles.iconContainer} ${styles.hideOnMobile}`}
             >
               <Icon symbol={'user'}></Icon>
