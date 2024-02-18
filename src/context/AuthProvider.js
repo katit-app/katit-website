@@ -33,6 +33,7 @@ export const AuthContextProvider = ({ children }) => {
       .confirm(token, false)
       .then((response) => {
         console.log('Confirmed'/*, JSON.stringify({ response })*/);
+        navigate('/login');
       })
       .catch((error) => {
         console.log(error);

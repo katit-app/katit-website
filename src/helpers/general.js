@@ -69,7 +69,7 @@ function isEmpty(input) {
     isAuth()
  */
 function isAuth(ctx) {
-  return ctx.state?.authenitficated;
+  return ctx.state?.authentificated;
   const isBrowser = typeof window !== 'undefined';
   if (isBrowser) {
     const token = window.localStorage.getItem('key');
