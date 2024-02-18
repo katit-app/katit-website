@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { navigate } from 'gatsby';
 import {
   validateEmail,
@@ -11,6 +11,7 @@ import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
 import Layout from '../components/Layout/Layout';
 import FormInputField from '../components/FormInputField/FormInputField';
 import Button from '../components/Button';
+import { AuthContext } from '../context/AuthProvider';
 
 const SignupPage = (props) => {
   const initialState = {
@@ -30,6 +31,8 @@ const SignupPage = (props) => {
   const [signupForm, setSignupForm] = useState(initialState);
   const [errorForm, setErrorForm] = useState(errorState);
 
+  const ctx = useContext(AuthContext);
+
   const handleChange = (id, e) => {
     const tempForm = { ...signupForm, [id]: e };
     setSignupForm(tempForm);
@@ -39,7 +42,7 @@ const SignupPage = (props) => {
     e.preventDefault();
     let validForm = true;
     const tempError = { ...errorState };
-
+    debugger;
     if (isEmpty(signupForm.firstName) === true) {
       tempError.firstName = 'Field required';
       validForm = false;
@@ -64,8 +67,9 @@ const SignupPage = (props) => {
 
     if (validForm === true) {
       setErrorForm(errorState);
-      navigate('/accountSuccess');
-      window.localStorage.setItem('key', 'sampleToken');
+      ctx.signup(signupForm.email, signupForm.password);
+      //navigate('/accountSuccess');
+      //window.localStorage.setItem('key', 'sampleToken');
       //create account endpoint
     } else {
       setErrorForm(tempError);
