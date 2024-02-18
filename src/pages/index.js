@@ -12,14 +12,19 @@ import Quote from '../components/Quote';
 import Title from '../components/Title';
 
 import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
-
+import { useContext } from 'react';
 import * as styles from './index.module.css';
 import { Link, navigate } from 'gatsby';
+import { AuthContext } from '../context/AuthProvider';
 
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
-
+  const ctx = useContext(AuthContext);
+  const hash = window.location.hash;
+  if (hash?.length > 0) {
+    ctx.confirm(hash.split("token=").pop());
+  }
   const goToShop = () => {
     navigate('/shop');
   };

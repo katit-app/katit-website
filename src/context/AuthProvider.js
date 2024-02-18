@@ -28,6 +28,17 @@ export const AuthContextProvider = ({ children }) => {
         .catch((error) => onError(JSON.stringify(error)));
   };
 
+  const confirm = (token) => {
+    auth
+      .confirm(token, false)
+      .then((response) => {
+        console.log('Confirmed'/*, JSON.stringify({ response })*/);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const logout = () => {
     if (state.authentificated) return;
     const user = auth.currentUser();
@@ -67,6 +78,7 @@ export const AuthContextProvider = ({ children }) => {
         login,
         logout,
         signup,
+        confirm,
       }}
     >
       {children}

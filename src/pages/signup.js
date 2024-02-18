@@ -42,7 +42,6 @@ const SignupPage = (props) => {
     e.preventDefault();
     let validForm = true;
     const tempError = { ...errorState };
-    debugger;
     if (isEmpty(signupForm.firstName) === true) {
       tempError.firstName = 'Field required';
       validForm = false;
