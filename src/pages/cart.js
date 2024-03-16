@@ -44,7 +44,7 @@ const CartPage = (props) => {
             <h3>My Bag</h3>
             <div className={styles.cartContainer}>
               <div className={styles.cartItemsContainer}>
-                {state.map((item, index) => (<CartItem {...item} color={item.color.title} index={index} />))}
+                {state?.map((item, index) => (<CartItem {...item} color={item.color.title} index={index} />))}
               </div>
               <OrderSummary />
             </div>

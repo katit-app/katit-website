@@ -30,17 +30,17 @@ const ProductPage = ({pageContext}) => {
   const [qty, setQty] = useState(1);
   const [isWishlist, setIsWishlist] = useState(false);
   const [activeSwatch, setActiveSwatch] = useState(
-    sampleProduct.colorOptions[0]
+    sampleProduct?.colorOptions[0]  || {color: "#ffffff", title: "White"}
   );
-  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0]);
-  const suggestions = generateMockProductData(4);
+  const [activeSize, setActiveSize] = useState(sampleProduct?.sizeOptions[0] || "S");
+  //const suggestions = generateMockProductData(4);
 
   const addToBag = () => {
     cartCtx.addItem({...sampleProduct, size: activeSize, color: activeSwatch, amount: qty });
     showNotification(sampleProduct);
   };
 
-  return (
+  return sampleProduct && (
     <Layout>
       <div className={styles.root}>
         <Container size={'large'} spacing={'min'}>
