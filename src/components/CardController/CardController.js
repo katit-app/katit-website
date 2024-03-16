@@ -70,14 +70,14 @@ const CardController = (props) => {
         </Container>
         <div className={styles.actionContainer}>
           <Button
-            onClick={closeFilter}
+            onClick={() => {closeFilter(filterState)}}
             className={styles.customButtonStyling}
             level={'primary'}
           >
             view items
           </Button>
           <Button
-            onClick={closeFilter}
+            onClick={() => {closeFilter(filterState)}}
             className={styles.customButtonStyling}
             level={'secondary'}
           >
@@ -86,7 +86,7 @@ const CardController = (props) => {
         </div>
       </div>
       <div className={styles.mobileRoot}>
-        <Drawer visible={visible} close={closeFilter}>
+        <Drawer visible={visible} close={() => {closeFilter(filterState)}}>
           <div className={styles.mobileFilterContainer}>
             <h2 className={styles.mobileFilterTitle}>Filters</h2>
 
@@ -153,7 +153,7 @@ const CardController = (props) => {
               )}
               {category !== undefined && (
                 <div>
-                  <Button onClick={closeFilter} fullWidth level={'primary'}>
+                  <Button onClick={() => {closeFilter(filterState)}} fullWidth level={'primary'}>
                     Apply
                   </Button>
                   <div

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import { navigate } from 'gatsby';
 import AdjustItem from '../AdjustItem';
@@ -6,10 +6,11 @@ import CurrencyFormatter from '../CurrencyFormatter';
 import RemoveItem from '../RemoveItem';
 
 import * as styles from './MiniCartItem.module.css';
+import CartContext from '../../context/CartProvider';
 
 const MiniCartItem = (props) => {
-  const { image, alt, name, price, color, size } = props;
-
+  const { image, alt, name, price, color, size, index, amount } = props;
+  const { removeItem} = useContext(CartContext);
   return (
     <div className={styles.root}>
       <div
@@ -32,10 +33,10 @@ const MiniCartItem = (props) => {
           </span>
         </div>
         <div className={styles.adjustItemContainer}>
-          <AdjustItem />
+          <AdjustItem index={index} amount={amount} />
         </div>
       </div>
-      <div className={styles.closeContainer}>
+      <div className={styles.closeContainer} onClick={() => removeItem(props)}>
         <RemoveItem />
       </div>
     </div>

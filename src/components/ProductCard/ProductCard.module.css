@@ -24,6 +24,12 @@
     color: var(--standard-black);
 }
 
+.productDescription {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--grey-placeholder)
+}
+
 .prices {
     margin-top: 8px;
     font-size: 14px;

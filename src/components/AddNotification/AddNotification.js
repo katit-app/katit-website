@@ -9,19 +9,21 @@ import Icon from '../Icons/Icon';
 import * as styles from './AddNotification.module.css';
 
 const AddNotification = (props) => {
-  const sampleCartItem = {
-    image: '/products/pdp1.jpeg',
-    alt: '',
-    name: 'Lambswool Crew Neck Jumper',
-    price: 220,
-    color: 'Anthracite Melange',
-    size: 'XS',
-  };
+  // const sampleCartItem = {
+  //   image: '/products/pdp1.jpeg',
+  //   alt: '',
+  //   name: 'Lambswool Crew Neck Jumper',
+  //   price: 220,
+  //   color: 'Anthracite Melange',
+  //   size: 'XS',
+  // };
 
   const ctxAddItemNotification = useContext(AddItemNotificationContext);
   const showNotif = ctxAddItemNotification.state?.open;
 
-  return (
+  const sampleCartItem = ctxAddItemNotification.state?.product;
+
+  return sampleCartItem && (
     <div
       className={`${styles.root} ${
         showNotif === true ? styles.show : styles.hide

@@ -15,11 +15,13 @@ const ProductCard = (props) => {
     originalPrice,
     meta,
     showQuickView,
+    link,
+    description,
     height = 580,
   } = props;
 
   const handleRouteToProduct = () => {
-    navigate('/product/sample');
+    navigate(`/product/${link}`);
   };
 
   const handleQuickView = (e) => {
@@ -47,7 +49,7 @@ const ProductCard = (props) => {
         >
           <Icon symbol={'bagPlus'} />
         </div>
-        <div
+        {/* <div
           className={styles.heartContainer}
           role={'presentation'}
           onClick={(e) => handleFavorite(e)}
@@ -60,10 +62,11 @@ const ProductCard = (props) => {
           >
             <Icon symbol={'heartFill'}></Icon>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className={styles.detailsContainer}>
         <span className={styles.productName}>{name}</span>
+        <div><span className={styles.productDescription}>{description}</span></div>
         <div className={styles.prices}>
           <span
             className={`${originalPrice !== undefined ? styles.salePrice : ''}`}

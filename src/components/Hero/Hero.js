@@ -17,7 +17,7 @@ const Hero = (props) => {
     header,
   } = props;
   return (
-    <div className={styles.root} style={{ backgroundImage: `url(${image})` }}>
+    <div className={styles.root} style={{ backgroundImage: `url(${image})` }} onClick={ctaAction}>
       <div className={styles.content} style={{ maxWidth: maxWidth }}>
         {header && <span className={styles.header}>{header}</span>}
         {title && <h2 className={styles.title}>{title}</h2>}

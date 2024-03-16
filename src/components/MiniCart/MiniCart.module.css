@@ -57,6 +57,7 @@
     margin: 0px 16px;
     padding-top: 32px;
     border-top: 1px solid var(--bg-light-gray);
+    background-color: white;
 }
 
 .linkContainer {

@@ -5,7 +5,7 @@ import blogJson from './blog.json';
 */
 function generateMockProductData(count, tag) {
   const products = productJson;
-  const filtered = products.filter((item) => item.tags.includes(tag));
+  const filtered = tag ? products.filter((item) => item.tags.includes(tag)) : products;
   return filtered.slice(0, count);
 }
 

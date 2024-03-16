@@ -5,28 +5,30 @@ import CurrencyFormatter from '../CurrencyFormatter';
 import SizeList from '../SizeList';
 import SwatchList from '../SwatchList';
 
-import { generateMockProductData } from '../../helpers/mock';
+//import { generateMockProductData } from '../../helpers/mock';
 import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
 
 import * as styles from './QuickView.module.css';
+import CartContext from '../../context/CartProvider';
 
 const QuickView = (props) => {
-  const { close, buttonTitle = 'Add to Bag' } = props;
-  const sampleProduct = generateMockProductData(1, 'sample')[0];
-
+  const { close, buttonTitle = 'Add to Bag', item } = props;
+  const sampleProduct = item;// = generateMockProductData(1, 'sample')[0];
   const ctxAddItemNotification = useContext(AddItemNotificationContext);
+  const cartCtx = useContext(CartContext);
   const showNotification = ctxAddItemNotification.showNotification;
   const [activeSwatch, setActiveSwatch] = useState(
-    sampleProduct.colorOptions[0]
+    sampleProduct?.color ? sampleProduct.colorOptions.find(c => c.title == sampleProduct?.color) : sampleProduct?.colorOptions[0]
   );
-  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0]);
+  const [activeSize, setActiveSize] = useState(sampleProduct?.size || sampleProduct?.sizeOptions[0]);
 
   const handleAddToBag = () => {
+    cartCtx.addItem({...item, size: activeSize, color: activeSwatch});
     close();
-    showNotification();
+    showNotification(item);
   };
 
-  return (
+  return item && (
     <div className={styles.root}>
       <div className={styles.titleContainer}>
         <h4>Select Options</h4>

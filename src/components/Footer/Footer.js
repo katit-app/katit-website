@@ -69,12 +69,12 @@ const Footer = (prop) => {
             })}
             <div className={styles.newsLetter}>
               <div className={styles.newsLetterContent}>
-                <span className={styles.linkTitle}>Newsletter</span>
+                {/* <span className={styles.linkTitle}>Newsletter</span>
                 <p className={styles.promoMessage}>
                   Get 15% off your first purchase! Plus, be the first to know
                   about sales, new product launches and exclusive offers!
-                </p>
-                <form
+                </p> */}
+                {/* <form
                   className={styles.newsLetterForm}
                   onSubmit={(e) => subscribeHandler(e)}
                 >
@@ -85,7 +85,7 @@ const Footer = (prop) => {
                     placeholder={'Email'}
                     handleChange={(_, e) => setEmail(e)}
                   />
-                </form>
+                </form> */}
                 <div className={styles.socialContainer}>
                   {Config.social.youtube && (
                     <div
@@ -132,7 +132,7 @@ const Footer = (prop) => {
           </div>
         </div>
       </Container>
-      <div className={styles.contentBottomContainer}>
+      {/* <div className={styles.contentBottomContainer}>
         <Container size={'large'} spacing={'min'}>
           <div className={styles.contentBottom}>
             <div className={styles.settings}>
@@ -179,7 +179,7 @@ const Footer = (prop) => {
             </div>
           </div>
         </Container>
-      </div>
+      </div> */}
     </div>
   );
 };

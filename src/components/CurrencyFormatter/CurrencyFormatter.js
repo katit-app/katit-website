@@ -27,7 +27,7 @@ const CurrencyFormatter = ({
   let formattedPrice = formatObject.format(displayAmount);
   if ('formatToParts' in formatObject) {
     const formattedPriceParts = formatObject.formatToParts(displayAmount);
-    if (useDollar === false) symbol = formattedPriceParts[0].value;
+    if (useDollar === false) symbol = '€' //formattedPriceParts[0].value;
     const currencyValue = formattedPriceParts.find(
       (obj) => obj.type === 'currency'
     );

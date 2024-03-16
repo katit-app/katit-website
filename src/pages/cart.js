@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Brand from '../components/Brand';
 import CartItem from '../components/CartItem';
@@ -9,16 +9,18 @@ import Icon from '../components/Icons/Icon';
 import OrderSummary from '../components/OrderSummary';
 
 import * as styles from './cart.module.css';
+import CartContext from '../context/CartProvider';
 
 const CartPage = (props) => {
-  const sampleCartItem = {
-    image: '/products/pdp1.jpeg',
-    alt: '',
-    name: 'Lambswool Crew Neck Jumper',
-    price: 220,
-    color: 'Anthracite Melange',
-    size: 'XS',
-  };
+  // const sampleCartItem = {
+  //   image: '/products/pdp1.jpeg',
+  //   alt: '',
+  //   name: 'Lambswool Crew Neck Jumper',
+  //   price: 220,
+  //   color: 'Anthracite Melange',
+  //   size: 'XS',
+  // };
+  const { state } = useContext(CartContext);
 
   return (
     <div>
@@ -42,8 +44,7 @@ const CartPage = (props) => {
             <h3>My Bag</h3>
             <div className={styles.cartContainer}>
               <div className={styles.cartItemsContainer}>
-                <CartItem {...sampleCartItem} />
-                <CartItem {...sampleCartItem} />
+                {state.map((item, index) => (<CartItem {...item} color={item.color.title} index={index} />))}
               </div>
               <OrderSummary />
             </div>

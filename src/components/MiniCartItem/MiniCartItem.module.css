@@ -29,6 +29,7 @@
 
 .closeContainer {
     flex-shrink: 0;
+    margin-left: -27px;
 }
 
 .name {

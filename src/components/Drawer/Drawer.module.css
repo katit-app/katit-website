@@ -10,7 +10,7 @@
 }
 
 .overlay {
-    width: calc(100% - 540px);
+    width: calc(100% - 340px);
     background-color: var(--standard-black);
     transition: all ease-in-out 0.3s;
     position: relative;
@@ -20,7 +20,7 @@
 .content {
     position: relative;
     background-color: var(--standard-white);
-    width: 540px;
+    width: 340px;
     transition: all ease-in-out 0.3s;
     overflow-y: auto;
 }
@@ -70,7 +70,7 @@
 }
 
 .hideContent {
-    right: -540px;
+    right: -340px;
 }
 
 .showReverse {
@@ -78,7 +78,7 @@
 }
 
 .hideReverse {
-    left: -540px;
+    left: -340px;
 }
 
 .isReverse {

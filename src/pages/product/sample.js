@@ -9,28 +9,36 @@ import Container from '../../components/Container';
 import CurrencyFormatter from '../../components/CurrencyFormatter';
 import Gallery from '../../components/Gallery';
 import SizeList from '../../components/SizeList';
-import Split from '../../components/Split';
+//import Split from '../../components/Split';
 import SwatchList from '../../components/SwatchList';
 import Layout from '../../components/Layout/Layout';
 
 import { generateMockProductData } from '../../helpers/mock';
 import Icon from '../../components/Icons/Icon';
 import ProductCardGrid from '../../components/ProductCardGrid';
-import { navigate } from 'gatsby';
+//import { navigate } from 'gatsby';
 
 import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
+import CartContext from '../../context/CartProvider';
 
-const ProductPage = (props) => {
+const ProductPage = ({pageContext}) => {
   const ctxAddItemNotification = useContext(AddItemNotificationContext);
   const showNotification = ctxAddItemNotification.showNotification;
-  const sampleProduct = generateMockProductData(1, 'sample')[0];
-  const [qty, setQty] = useState(0);
+  //const sampleProduct = generateMockProductData(1, 'sample')[0];
+  const cartCtx = useContext(CartContext);
+  const {sampleProduct} = pageContext;
+  const [qty, setQty] = useState(1);
   const [isWishlist, setIsWishlist] = useState(false);
   const [activeSwatch, setActiveSwatch] = useState(
     sampleProduct.colorOptions[0]
   );
   const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0]);
-  const suggestions = generateMockProductData(4, 'woman');
+  const suggestions = generateMockProductData(4);
+
+  const addToBag = () => {
+    cartCtx.addItem({...sampleProduct, size: activeSize, color: activeSwatch, amount: qty });
+    showNotification(sampleProduct);
+  };
 
   return (
     <Layout>
@@ -38,19 +46,18 @@ const ProductPage = (props) => {
         <Container size={'large'} spacing={'min'}>
           <Breadcrumbs
             crumbs={[
-              { link: '/', label: 'Home' },
-              { label: 'Men', link: '/shop' },
-              { label: 'Sweater', link: '/shop' },
+              { label: 'Shop', link: '/shop' },
               { label: `${sampleProduct.name}` },
             ]}
           />
           <div className={styles.content}>
             <div className={styles.gallery}>
-              <Gallery images={sampleProduct.gallery} />
+              <Gallery images={sampleProduct.gallery || [{image: sampleProduct.image}]} />
+              {/* <div><span className={styles.vendor}>{sampleProduct.description}</span></div> */}
             </div>
             <div className={styles.details}>
               <h1>{sampleProduct.name}</h1>
-              <span className={styles.vendor}> by {sampleProduct.vendor}</span>
+              <span className={styles.vendor}> by Katit</span>
 
               <div className={styles.priceContainer}>
                 <CurrencyFormatter appendZero amount={sampleProduct.price} />
@@ -74,13 +81,13 @@ const ProductPage = (props) => {
 
               <div className={styles.quantityContainer}>
                 <span>Quantity</span>
-                <AdjustItem qty={qty} setQty={setQty} />
+                <AdjustItem amount={qty} onChange={setQty} />
               </div>
 
               <div className={styles.actionContainer}>
                 <div className={styles.addToButtonContainer}>
                   <Button
-                    onClick={() => showNotification()}
+                    onClick={addToBag}
                     fullWidth
                     level={'primary'}
                   >
@@ -127,15 +134,15 @@ const ProductPage = (props) => {
                     {sampleProduct.description}
                   </p>
                 </Accordion>
-                <Accordion type={'plus'} customStyle={styles} title={'help'}>
+                {/* <Accordion type={'plus'} customStyle={styles} title={'help'}>
                   <p className={styles.information}>
                     {sampleProduct.description}
                   </p>
-                </Accordion>
+                </Accordion> */}
               </div>
             </div>
           </div>
-          <div className={styles.suggestionContainer}>
+          {/* <div className={styles.suggestionContainer}>
             <h2>You may also like</h2>
             <ProductCardGrid
               spacing
@@ -144,10 +151,10 @@ const ProductPage = (props) => {
               columns={4}
               data={suggestions}
             />
-          </div>
+          </div> */}
         </Container>
 
-        <div className={styles.attributeContainer}>
+        {/* <div className={styles.attributeContainer}>
           <Split
             image={'/cloth.png'}
             alt={'attribute description'}
@@ -159,7 +166,7 @@ const ProductPage = (props) => {
             cta={() => navigate('/blog')}
             bgColor={'var(--standard-light-grey)'}
           />
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

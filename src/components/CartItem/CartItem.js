@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import AdjustItem from '../AdjustItem';
 import CurrencyFormatter from '../CurrencyFormatter';
@@ -8,11 +8,12 @@ import QuickView from '../QuickView';
 
 import * as styles from './CartItem.module.css';
 import { navigate } from 'gatsby';
+import CartContext from '../../context/CartProvider';
 
 const CartItem = (props) => {
   const [showQuickView, setShowQuickView] = useState(false);
-  const { image, alt, color, name, size, price } = props;
-
+  const { image, alt, color, name, size, price, index, amount } = props;
+  const {removeItem} = useContext(CartContext);
   return (
     <div className={styles.root}>
       <div
@@ -37,16 +38,16 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={styles.adjustItemContainer}>
-        <AdjustItem />
+        <AdjustItem index={index} amount={amount} />
       </div>
       <div className={styles.priceContainer}>
         <CurrencyFormatter amount={price} appendZero />
       </div>
-      <div className={styles.removeContainer}>
+      <div className={styles.removeContainer} onClick={() => removeItem(props)}>
         <RemoveItem />
       </div>
       <Drawer visible={showQuickView} close={() => setShowQuickView(false)}>
-        <QuickView close={() => setShowQuickView(false)} />
+        {showQuickView && (<QuickView item={props} close={() => setShowQuickView(false)} />)}
       </Drawer>
     </div>
   );

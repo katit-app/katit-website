@@ -33,7 +33,7 @@ const OrderSummary = (props) => {
             </span>
           </div>
         </div>
-        <div className={styles.couponContainer}>
+        {/* <div className={styles.couponContainer}>
           <span>Coupon Code</span>
           <FormInputField
             value={coupon}
@@ -48,7 +48,7 @@ const OrderSummary = (props) => {
             id={'couponInput'}
             icon={'arrow'}
           />
-        </div>
+        </div> */}
         <div className={styles.totalContainer}>
           <span>Total: </span>
           <span>

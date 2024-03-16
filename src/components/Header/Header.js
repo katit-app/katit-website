@@ -15,6 +15,7 @@ import MiniCart from '../MiniCart';
 import MobileNavigation from '../MobileNavigation';
 import AuthContext from '../../context/AuthProvider';
 import * as styles from './Header.module.css';
+import CartContext from '../../context/CartProvider';
 
 const Header = (prop) => {
   const [showMiniCart, setShowMiniCart] = useState(false);
@@ -28,9 +29,10 @@ const Header = (prop) => {
   const [search, setSearch] = useState('');
 
   const ctx = useContext(AuthContext);
+  const cartCtx = useContext(CartContext);
 
   const searchRef = createRef();
-  const bannerMessage = 'Free shipping worldwide';
+  // const bannerMessage = 'Free shipping worldwide';
   const searchSuggestions = [
     'Oversize sweaters',
     'Lama Pajamas',
@@ -83,10 +85,10 @@ const Header = (prop) => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.headerMessageContainer}>
+      {/* <div className={styles.headerMessageContainer}>
         <span>{bannerMessage}</span>
-      </div>
-      <Container size={'large'} spacing={'min'}>
+      </div> */}
+      <Container size={'large'} spacing={'full'}>
         {/* header container */}
         <div className={styles.header}>
           <div className={styles.linkContainer}>
@@ -122,7 +124,7 @@ const Header = (prop) => {
           </div>
           <Brand />
           <div className={styles.actionContainers}>
-            <button
+            {/* <button
               aria-label="Search"
               className={`${styles.iconButton} ${styles.iconContainer}`}
               onClick={() => {
@@ -130,7 +132,7 @@ const Header = (prop) => {
               }}
             >
               <Icon symbol={'search'}></Icon>
-            </button>
+            </button> */}
             <Link
               aria-label="Favorites"
               href="/account/favorites"
@@ -154,9 +156,12 @@ const Header = (prop) => {
               }}
             >
               <Icon symbol={'bag'}></Icon>
-              <div className={styles.bagNotification}>
-                <span>1</span>
-              </div>
+              {cartCtx.state?.length > 0 && (
+                <div className={styles.bagNotification}>
+                  <span>{cartCtx.state.length}</span>
+                </div>
+              )}
+              
             </button>
             <div className={styles.notificationContainer}>
               <AddNotification openCart={() => setShowMiniCart(true)} />
@@ -231,7 +236,7 @@ const Header = (prop) => {
       <div className={styles.mobileMenuContainer}>
         <Drawer
           hideCross
-          top={'98px'}
+          top={'85px'}
           isReverse
           visible={mobileMenu}
           close={() => setMobileMenu(false)}

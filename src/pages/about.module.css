@@ -14,7 +14,7 @@
     border-bottom: 1px solid var(--bg-light-gray);
     position: sticky;
     gap: 48px;
-    top: 150px;
+    top: 85px;
     background-color: var(--standard-white);
     overflow-x: auto;
     padding-left: 32px;

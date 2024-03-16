@@ -1,17 +1,18 @@
 [
     {
         "productCode": "MJUM8066-GYDZ",
+        "link": "trusy",
         "name": "Lambswool Crew Neck Jumper",
         "vendor": "Sunspel",
         "price": 75,
         "alt": "lambswool crew neck jumper",
         "image": "/products/pdp1.jpeg",
         "colorOptions": [
-            {"color": "#000000", "title": "Anthracite Melange"},
-            {"color": "#4D34AE", "title": "Pale Purple"},
-            {"color": "#488266", "title": "Green Moss"}
+            {"color": "#000000", "title": "Black"},
+            {"color": "#dddddd", "title": "Grey"},
+            {"color": "#ffffff", "title": "White"}
         ],
-        "sizeOptions": ["xs", "s", "m", "l", "xl"],
+        "sizeOptions": ["XS", "S", "M", "L", "XL"],
         "wishlist": true,
         "tags": ["sample"],
         "gallery": [
@@ -24,92 +25,174 @@
     },
     {
         "name": "Classic T-Shirt",
+        "link": "noski",
         "price": 75,
         "alt": "classic t-shirt 1",
         "image": "/products/shirt1.jpg",
-        "tags": ["shirt", "men"]
+        "tags": ["shirt", "men"],
+        "colorOptions": [
+            {"color": "#ffffff", "title": "White"}
+        ],
+        
+        "sizeOptions": ["XS"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+
     },
     {
         "name": "Classic T-Shirt",
+        "link": "lifon",
         "price": 75,
         "alt": "classic t-shirt 2",
         "image": "/products/shirt2.jpg",
-        "tags": ["shirt", "men"]
+        "tags": ["shirt", "men"],
+        "colorOptions": [
+            {"color": "#000000", "title": "Black"}
+        ],
+        "sizeOptions": ["S"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+
     },
     {
         "name": "Classic T-Shirt",
+        "link": "krasnye truselya",
         "price": 75,
         "alt": "classic t-shirt 3",
         "image": "/products/shirt3.jpg",
-        "tags": ["shirt", "men"]
+        "tags": ["shirt", "men"],
+        "colorOptions": [
+            {"color": "#ffffff", "title": "White"}
+        ],
+        "sizeOptions": ["M"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+
     },
     {
         "name": "Relaxed-fit graphic T-shirt",
+        "link": "valenki",
         "price": 13.90,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman1.jpeg",
         "tags": ["woman"],
-        "meta": "+ 2 colors"
+        "meta": "+ 2 colors",
+        "colorOptions": [
+            {"color": "#000000", "title": "Black"},
+            {"color": "#ffffff", "title": "White"}
+        ],
+        "sizeOptions": ["L"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+
     },
     {
         "name": "Relaxed-fit graphic T-shirt",
+        "link": "sandali",
         "price": 15.90,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman2.jpeg",
-        "tags": ["woman"]
+        "tags": ["woman"],
+        "colorOptions": [
+            {"color": "#000000", "title": "Black"}
+        ],
+        "sizeOptions": ["XL"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+
     },    
     {
         "name": "Relaxed-fit graphic T-shirt",
+        "link": "kepka",
         "price": 13.90,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman3.jpeg",
         "tags": ["woman"],
-        "meta": "+ 2 colors"
+        "meta": "+ 2 colors",
+        "colorOptions": [
+            {"color": "#000000", "title": "Black"},
+            {"color": "#dddddd", "title": "Grey"}
+        ],
+        "sizeOptions": ["L", "XL"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+
     },
     {
         "name": "Relaxed-fit graphic T-shirt",
+        "link": "alkashka",
         "price": 15.90,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman4.jpeg",
-        "tags": ["woman"]
+        "tags": ["woman"],
+        "colorOptions": [
+            {"color": "#dddddd", "title": "Grey"},
+            {"color": "#ffffff", "title": "White"}
+        ],
+        "sizeOptions": ["M", "L", "XL"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+
     },
     {
         "name": "Relaxed-fit graphic T-shirt",
+        "link": "shuba",
         "price": 15.90,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman5.jpeg",
         "tags": ["woman"],
-        "originalPrice": 31.50
-
+        "originalPrice": 31.50,
+        "colorOptions": [
+            {"color": "#000000", "title": "Black"}
+        ],
+        "sizeOptions": ["XS", "S"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
     },
     {
         "name": "Relaxed-fit graphic T-shirt",
         "price": 21,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman6.jpeg",
-        "tags": ["woman"]
+        "tags": ["woman"],
+        "colorOptions": [
+            {"color": "#000000", "title": "Black"}
+        ],
+        "sizeOptions": ["S", "M"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
     },
     {
         "name": "Relaxed-fit graphic T-shirt",
+        "link": "shapka-ushanka",
         "price": 15.90,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman3.jpeg",
-        "tags": ["woman"]
+        "tags": ["woman"],
+        "colorOptions": [
+            {"color": "#ffffff", "title": "White"}
+        ],
+        "sizeOptions": ["M", "L"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
     },
     {
         "name": "Relaxed-fit graphic T-shirt",
+        "link": "shorty",
         "price": 15.90,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman2.jpeg",
         "tags": ["woman"],
-        "originalPrice": 31.50
+        "originalPrice": 31.50,
+        "colorOptions": [
+            {"color": "#000000", "title": "Black"},
+            {"color": "#ffffff", "title": "White"}
+        ],
+        "sizeOptions": [ "S", "XL"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
 
     },
     {
         "name": "Relaxed-fit graphic T-shirt",
+        "link": "podshtaniki",
         "price": 21,
         "alt": "relaxed t shirt woman",
         "image": "/products/woman1.jpeg",
-        "tags": ["woman"]
+        "tags": ["woman"],
+        "colorOptions": [
+            {"color": "#dddddd", "title": "Grey"}
+        ],
+        "sizeOptions": ["XS", "XL"],
+        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
     }
   ]

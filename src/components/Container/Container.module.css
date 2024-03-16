@@ -17,6 +17,11 @@
     width: 95%;
 }
 
+.container.full {
+    width: 99vw;
+    max-width: 99vw;
+}
+
 .container.none {
     width: 100%;
 }
