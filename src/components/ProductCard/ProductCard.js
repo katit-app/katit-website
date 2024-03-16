@@ -66,7 +66,7 @@ const ProductCard = (props) => {
       </div>
       <div className={styles.detailsContainer}>
         <span className={styles.productName}>{name}</span>
-        <div><span className={styles.productDescription}>{description}</span></div>
+        {/* <div><span className={styles.productDescription}>{description}</span></div> */}
         <div className={styles.prices}>
           <span
             className={`${originalPrice !== undefined ? styles.salePrice : ''}`}

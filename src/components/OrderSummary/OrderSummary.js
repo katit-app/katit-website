@@ -7,7 +7,7 @@ import CurrencyFormatter from '../CurrencyFormatter';
 
 import * as styles from './OrderSummary.module.css';
 
-const OrderSummary = (props) => {
+const OrderSummary = ({subtotal, shipping}) => {
   const [coupon, setCoupon] = useState('');
   const [giftCard, setGiftCard] = useState('');
 
@@ -19,12 +19,14 @@ const OrderSummary = (props) => {
           <div className={styles.labelContainer}>
             <span>Subtotal</span>
             <span>
-              <CurrencyFormatter amount={440} appendZero />
+              <CurrencyFormatter amount={subtotal} appendZero />
             </span>
           </div>
           <div className={styles.labelContainer}>
             <span>Shipping</span>
-            <span>---</span>
+            <span>
+              <CurrencyFormatter amount={subtotal > 0 ?shipping: 0} appendZero />
+            </span>
           </div>
           <div className={styles.labelContainer}>
             <span>Tax</span>
@@ -52,7 +54,7 @@ const OrderSummary = (props) => {
         <div className={styles.totalContainer}>
           <span>Total: </span>
           <span>
-            <CurrencyFormatter amount={440} appendZero />
+            <CurrencyFormatter amount={subtotal + shipping} appendZero />
           </span>
         </div>
       </div>

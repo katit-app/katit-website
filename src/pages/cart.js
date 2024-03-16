@@ -21,6 +21,9 @@ const CartPage = (props) => {
   //   size: 'XS',
   // };
   const { state } = useContext(CartContext);
+  const getTotal = () => {
+    return state?.reduce((s, item) => s + item.price * item.amount, 0) || 0;
+  };
 
   return (
     <div>
@@ -46,7 +49,7 @@ const CartPage = (props) => {
               <div className={styles.cartItemsContainer}>
                 {state?.map((item, index) => (<CartItem {...item} color={item.color.title} index={index} />))}
               </div>
-              <OrderSummary />
+              <OrderSummary subtotal={getTotal()} shipping={20} />
             </div>
           </div>
         </Container>

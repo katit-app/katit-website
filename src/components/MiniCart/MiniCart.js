@@ -19,6 +19,9 @@ const MiniCart = (props) => {
   // };
 
   const {state} = useContext(CartContext);
+  const getTotal = () => {
+    return state?.reduce((s, item) => s + item.price * item.amount, 0) || 0;
+  };
   return (
     <div className={styles.root}>
       <div className={styles.titleContainer}>
@@ -36,7 +39,7 @@ const MiniCart = (props) => {
           <div className={styles.totalContainer}>
             <span>Total (USD)</span>
             <span>
-              <CurrencyFormatter amount={220} appendZero />
+              <CurrencyFormatter amount={getTotal()} appendZero />
             </span>
           </div>
           <span className={styles.taxNotes}>

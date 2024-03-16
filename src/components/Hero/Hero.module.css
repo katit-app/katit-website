@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     color: var(--standard-white);
     cursor: pointer;
 }
@@ -46,12 +46,12 @@
 .ctaLink {
     
     text-transform: uppercase;
-    color: white;
+    color: black;
 
     font-weight: 300;
     font-size: 1.5em;
     line-height: 14px;
-    padding-top: 30%;
+    padding-top: 300%;
 }
 
 .header {

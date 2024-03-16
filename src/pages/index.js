@@ -16,6 +16,7 @@ import { useContext } from 'react';
 // import * as styles from './index.module.css';
 import { /*Link,*/ navigate } from 'gatsby';
 import { AuthContext } from '../context/AuthProvider';
+import Shop from '../components/Shop/Shop';
 
 const IndexPage = () => {
   // const newArrivals = generateMockProductData(3, 'shirt');
@@ -146,6 +147,7 @@ const IndexPage = () => {
         </div>
       </div> */}
       {/* <AttributeGrid /> */}
+      <Shop />
     </Layout>
   );
 };

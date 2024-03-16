@@ -13,7 +13,10 @@ import CartContext from '../../context/CartProvider';
 const CartItem = (props) => {
   const [showQuickView, setShowQuickView] = useState(false);
   const { image, alt, color, name, size, price, index, amount } = props;
-  const {removeItem} = useContext(CartContext);
+  const {removeItem, editAmount} = useContext(CartContext);
+  const onChange = (amount) =>  {
+    editAmount(index, amount);
+  };
   return (
     <div className={styles.root}>
       <div
@@ -38,7 +41,7 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={styles.adjustItemContainer}>
-        <AdjustItem index={index} amount={amount} />
+        <AdjustItem index={index} amount={amount} onChange={onChange} />
       </div>
       <div className={styles.priceContainer}>
         <CurrencyFormatter amount={price} appendZero />

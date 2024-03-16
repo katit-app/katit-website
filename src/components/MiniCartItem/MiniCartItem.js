@@ -10,7 +10,11 @@ import CartContext from '../../context/CartProvider';
 
 const MiniCartItem = (props) => {
   const { image, alt, name, price, color, size, index, amount } = props;
-  const { removeItem} = useContext(CartContext);
+  const { removeItem, editAmount } = useContext(CartContext);
+  const onChange = (amount) =>  {
+    editAmount(index, amount);
+  };
+
   return (
     <div className={styles.root}>
       <div
@@ -33,7 +37,7 @@ const MiniCartItem = (props) => {
           </span>
         </div>
         <div className={styles.adjustItemContainer}>
-          <AdjustItem index={index} amount={amount} />
+          <AdjustItem index={index} amount={amount} onChange={onChange} />
         </div>
       </div>
       <div className={styles.closeContainer} onClick={() => removeItem(props)}>
