@@ -34,7 +34,7 @@ const IndexPage = () => {
       {/* Hero Container */}
       <Hero
         maxWidth={'500px'}
-        image={'/main.webp'}
+        image={'/main2.jpg'}
         title={''}
         subtitle={''}
         ctaLink={'NEW'}
