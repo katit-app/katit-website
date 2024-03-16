@@ -1,6 +1,7 @@
 .root {
     height: 100%;
     overflow-y: hidden;
+    background-color: var(--standard-light-grey);
 }
 
 .titleContainer {
@@ -57,7 +58,7 @@
     margin: 0px 16px;
     padding-top: 32px;
     border-top: 1px solid var(--bg-light-gray);
-    background-color: white;
+    background-color: var(--standard-light-grey);
 }
 
 .linkContainer {

@@ -1,7 +1,7 @@
 .root {
     position: fixed;
     width: 100vw;
-    background-color: var(--standard-white);
+    background-color: var(--standard-light-grey);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     z-index: 50;
 }

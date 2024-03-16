@@ -1,10 +1,12 @@
 .root {
-    margin-top: 16px;
+    padding-top: 16px;
+    background-color: var(--standard-light-grey);
+
 }
 
 .content {
     display: flex;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .gallery {
