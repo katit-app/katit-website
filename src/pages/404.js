@@ -25,7 +25,7 @@ const NotFoundPage = () => {
             Uh oh, looks like the page you are looking for has moved or no
             longer exists.
           </p>
-          <form onSubmit={(e) => handleSubmit(e)}>
+          {/* <form onSubmit={(e) => handleSubmit(e)}>
             <div className={styles.searchContainer}>
               <FormInputField
                 id={'name'}
@@ -37,7 +37,7 @@ const NotFoundPage = () => {
                 search
               </Button>
             </div>
-          </form>
+          </form> */}
         </div>
       </Container>
     </Layout>

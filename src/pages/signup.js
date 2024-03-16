@@ -139,9 +139,9 @@ const SignupPage = (props) => {
           </form>
         </div>
 
-        <div className={styles.attributeGridContainer}>
+        {/* <div className={styles.attributeGridContainer}>
           <AttributeGrid />
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

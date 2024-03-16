@@ -25,7 +25,7 @@ const MiniCart = (props) => {
         <h4>My Bag</h4>
       </div>
       <div className={styles.cartItemsContainer}>
-        {state.map((item, index) =>(<MiniCartItem {...item} color={item.color.title} index={index} />))}
+        {state?.map((item, index) =>(<MiniCartItem {...item} color={item.color.title} index={index} />))}
         {/* <MiniCartItem {...sampleCartItem} />
         <MiniCartItem {...sampleCartItem} />
         <MiniCartItem {...sampleCartItem} /> */}
