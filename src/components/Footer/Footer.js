@@ -87,7 +87,7 @@ const Footer = (prop) => {
                   />
                 </form> */}
                 <div className={styles.socialContainer}>
-                  {Config.social.youtube && (
+                  {/* {Config.social.youtube && (
                     <div
                       onClick={() => handleSocialClick('youtube')}
                       role={'presentation'}
@@ -95,7 +95,7 @@ const Footer = (prop) => {
                     >
                       <Icon symbol={'youtube'}></Icon>
                     </div>
-                  )}
+                  )} */}
 
                   {Config.social.instagram && (
                     <div
@@ -107,7 +107,7 @@ const Footer = (prop) => {
                     </div>
                   )}
 
-                  {Config.social.facebook && (
+                  {/* {Config.social.facebook && (
                     <div
                       onClick={() => handleSocialClick('facebook')}
                       role={'presentation'}
@@ -116,14 +116,14 @@ const Footer = (prop) => {
                       <Icon symbol={'facebook'}></Icon>
                     </div>
                   )}
-
-                  {Config.social.twitter && (
+ */}
+                  {Config.social.pinterest && (
                     <div
-                      onClick={() => handleSocialClick('twitter')}
+                      onClick={() => handleSocialClick('pinterest')}
                       role={'presentation'}
                       className={styles.socialIconContainer}
                     >
-                      <Icon symbol={'twitter'}></Icon>
+                      <Icon symbol={'pinterestinverse'}></Icon>
                     </div>
                   )}
                 </div>
