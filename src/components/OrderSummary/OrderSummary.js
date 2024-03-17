@@ -82,16 +82,13 @@ const OrderSummary = ({subtotal, shipping}) => {
         </div>
       </div>
       <div className={styles.actionContainer}>
-        <form>
-          <Button
-            onClick={onSubmit}
-            fullWidth
-            level={'primary'}
-          >
-            Checkout
-          </Button>
-        </form>
-        
+        <Button
+          onClick={onSubmit}
+          fullWidth
+          level={'primary'}
+        >
+          Checkout
+        </Button>        
         <div className={styles.linkContainer}>
           <Link to={'/shop'}>CONTINUE SHOPPING</Link>
         </div>
