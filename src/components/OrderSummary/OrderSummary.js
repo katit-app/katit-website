@@ -12,16 +12,14 @@ const OrderSummary = ({subtotal, shipping}) => {
   const [giftCard, setGiftCard] = useState('');
 
   const onSubmit = () => {
-    fetch("https://peppy-pixie-2d0b01.netlify.app/api/stripe", {
+    fetch("/api/stripe", {
       method: "POST",
     })
       .then(function (response) {
-        debugger;
         console.log(response);
         return response.json();
       })
       .then(function (session) {
-        return;
         window.location.href = session.url;
         return;
       })
