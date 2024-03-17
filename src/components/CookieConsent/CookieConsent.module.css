@@ -1,0 +1,32 @@
+.container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    z-index: 51;
+    bottom: 0px;
+    background-color: white;
+    width: 100%;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.text {
+}
+
+.link {
+    margin: 0 5px;
+    text-decoration: underline;
+    color: gray;
+    font-weight: 500;
+}

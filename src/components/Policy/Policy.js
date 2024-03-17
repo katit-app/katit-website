@@ -4,7 +4,7 @@ import * as styles from './Policy.module.css';
 const Policy = (props) => {
   return (
     <div className={styles.root}>
-      <div className={styles.section}>
+      {/* <div className={styles.section}>
         <h3>1. Lorem Ipsum</h3>
         <p>
           Delaware limited liability company (The Sydney) collects personal
@@ -98,6 +98,30 @@ const Policy = (props) => {
           information or otherwise putting Information in a header designed to
           mislead recipients as to the origin of any content transmitted through
           the Website ("spoofing";);
+        </p>
+      </div> */}
+      <div className={styles.section}>
+        <h3>1. Info & cookies</h3>
+        <p>
+          At our website, we use cookies to enhance your browsing experience and 
+          provide you with personalized content and services. Cookies are small text 
+          files that are placed on your computer or mobile device when you visit a website. 
+          They help the website remember your preferences, settings, and login information, 
+          and provide you with a more seamless experience.
+        </p>
+        <p>
+          We use several types of cookies on our website, including session cookies, persistent 
+          cookies, and third-party cookies. Session cookies are temporary cookies that are 
+          deleted when you close your browser, while persistent cookies remain on your device 
+          for a set period of time. Third-party cookies are placed by a third-party service 
+          provider, such as Google Analytics, to collect data about your browsing behavior and 
+          provide analytics to help us improve our website.
+        </p>
+        <p>
+          Our use of cookies and third-party scripts is in accordance with our Privacy Policy, 
+          which outlines how we collect, use, and protect your personal information. We only 
+          collect data that is necessary to provide you with the best possible user experience 
+          and to improve our website's performance.
         </p>
       </div>
     </div>

@@ -8,8 +8,11 @@ import * as styles from './Layout.module.css';
 
 // CSS not modular here to provide global styles
 import './Globals.css';
+import CookieConsent from '../CookieConsent/CookieConsent';
+import { useCookies } from 'react-cookie';
 
 const Layout = ({ props, children, disablePaddingBottom = false }) => {
+  const [cookies] = useCookies(["cookieConsent"]);
   return (
     <>
       <Helmet>
@@ -26,8 +29,9 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
       </Helmet>
-
+      {!cookies.cookieConsent && <CookieConsent />}
       <Header />
+      
       <main
         className={`${styles.main} ${
           disablePaddingBottom === true ? styles.disablePaddingBottom : ''

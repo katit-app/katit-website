@@ -23,6 +23,7 @@
     "gatsby-plugin-manifest": "^4.14.0",
     "gotrue-js": "^0.9.29",
     "react": "^18.0.0",
+    "react-cookie": "^7.1.0",
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "react-slick": "^0.29.0"
