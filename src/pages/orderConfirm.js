@@ -13,16 +13,16 @@ const OrderConfirmPage = (props) => {
           <h1>Thank You!</h1>
           <p>
             We are now processing your order. If you have any concerns feel free
-            to email us at customerservice@example.com
+            to email us at katit.store@gmail.com
           </p>
           <div className={styles.actionContainer}>
-            <ActionCard
+            {/* <ActionCard
               title={'Order Status'}
               icon={'delivery'}
               subtitle={'Check your order status'}
               link={'/account/orders'}
               size={'lg'}
-            />
+            /> */}
 
             <ActionCard
               title={'Shop'}
@@ -31,12 +31,12 @@ const OrderConfirmPage = (props) => {
               link={'/shop'}
             />
 
-            <ActionCard
+            {/* <ActionCard
               title={'FAQs'}
               icon={'question'}
               subtitle={'Check out FAQs page'}
               link={'/faq'}
-            />
+            /> */}
 
             <ActionCard
               title={'Contact Us'}
