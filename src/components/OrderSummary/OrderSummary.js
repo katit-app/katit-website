@@ -20,7 +20,8 @@ const OrderSummary = ({subtotal, shipping}) => {
         return response.json();
       })
       .then(function (session) {
-        return stripePromise.redirectToCheckout({ sessionId: session.id })
+        window.location.href(session.url);
+        return;
       })
       .then(function (result) {
         // If `redirectToCheckout` fails due to a browser or network
