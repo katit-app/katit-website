@@ -31,6 +31,7 @@ exports.handler = async (event, context) => {
     success_url: "https://peppy-pixie-2d0b01.netlify.app/orderConfirm",
     cancel_url: "https://peppy-pixie-2d0b01.netlify.app/pidr",
   });
+  console.log(session);
   return {
     statusCode: 200,
     body: JSON.stringify({
