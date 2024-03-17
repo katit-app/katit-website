@@ -1,7 +1,6 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 exports.handler = async (event, context) => {
-    console.log(event);
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [
@@ -27,14 +26,13 @@ exports.handler = async (event, context) => {
       },
     ],
     mode: "payment",
-    success_url: "https://peppy-pixie-2d0b01.netlify.app/orderConfirm",
+    success_url: "https://peppy-pixie-2d0b01.netlify.app//orderConfirm",
     cancel_url: "https://peppy-pixie-2d0b01.netlify.app/pidr",
   });
-  context.redirect(303, session.url);
-//   return {
-//     statusCode: 200,
-//     body: JSON.stringify({
-//       id: session.id,
-//     }),
-//   };
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      url: session.url,
+    }),
+  };
 };

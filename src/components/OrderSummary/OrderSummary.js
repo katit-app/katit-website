@@ -11,6 +11,30 @@ const OrderSummary = ({subtotal, shipping}) => {
   const [coupon, setCoupon] = useState('');
   const [giftCard, setGiftCard] = useState('');
 
+  const onSubmit = () => {
+    fetch("/api/stripe", {
+      method: "POST",
+    })
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function (session) {
+        window.location(session.url);
+        return;
+      })
+      .then(function (result) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, you should display the localized error message to your
+        // customer using `error.message`.
+        if (result.error) {
+          alert(result.error.message);
+        }
+      })
+      .catch(function (error) {
+        console.error("Error:", error);
+      });
+  };
   return (
     <div className={styles.root}>
       <div className={styles.orderSummary}>
@@ -59,9 +83,9 @@ const OrderSummary = ({subtotal, shipping}) => {
         </div>
       </div>
       <div className={styles.actionContainer}>
-        <form action="/api/stripe" method="POST">
-          <Button type="submit"
-            onClick={() => navigate('/orderConfirm')}
+        <form>
+          <Button
+            onClick={onSubmit}
             fullWidth
             level={'primary'}
           >
