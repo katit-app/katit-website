@@ -6,7 +6,7 @@ import FormInputField from '../FormInputField/FormInputField';
 import CurrencyFormatter from '../CurrencyFormatter';
 
 import * as styles from './OrderSummary.module.css';
-const stripePromise = loadStripe("pk_test_51OvI4D032ruonfUmBz6Jki7mY6EQrbcJ8KEeODjJ490f7OVP99nWTEKhTxuAB9N9H4oYw1GftHocrpIhjn7EgpnX000vEpgpok");
+//const stripePromise = loadStripe("pk_test_51OvI4D032ruonfUmBz6Jki7mY6EQrbcJ8KEeODjJ490f7OVP99nWTEKhTxuAB9N9H4oYw1GftHocrpIhjn7EgpnX000vEpgpok");
 const OrderSummary = ({subtotal, shipping}) => {
   const [coupon, setCoupon] = useState('');
   const [giftCard, setGiftCard] = useState('');
@@ -20,7 +20,7 @@ const OrderSummary = ({subtotal, shipping}) => {
         return response.json();
       })
       .then(function (session) {
-        window.location.href(session.url);
+        window.location.href = session.url;
         return;
       })
       .then(function (result) {
