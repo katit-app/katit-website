@@ -11,6 +11,7 @@ import OrderSummary from '../components/OrderSummary';
 import * as styles from './cart.module.css';
 import CartContext from '../context/CartProvider';
 
+
 const CartPage = (props) => {
   // const sampleCartItem = {
   //   image: '/products/pdp1.jpeg',

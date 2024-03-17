@@ -59,13 +59,16 @@ const OrderSummary = ({subtotal, shipping}) => {
         </div>
       </div>
       <div className={styles.actionContainer}>
-        <Button
-          onClick={() => navigate('/orderConfirm')}
-          fullWidth
-          level={'primary'}
-        >
-          checkout
-        </Button>
+        <form action="/api/stripe" method="POST">
+          <Button type="submit"
+            onClick={() => navigate('/orderConfirm')}
+            fullWidth
+            level={'primary'}
+          >
+            Checkout
+          </Button>
+        </form>
+        
         <div className={styles.linkContainer}>
           <Link to={'/shop'}>CONTINUE SHOPPING</Link>
         </div>
