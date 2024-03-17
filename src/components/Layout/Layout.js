@@ -13,7 +13,6 @@ import { useCookies } from 'react-cookie';
 
 const Layout = ({ props, children, disablePaddingBottom = false }) => {
   const [cookies] = useCookies(["cookieConsent"]);
-  console.log(cookies);
   return (
     <>
       <Helmet>
