@@ -13,6 +13,7 @@ import { useCookies } from 'react-cookie';
 
 const Layout = ({ props, children, disablePaddingBottom = false }) => {
   const [cookies] = useCookies(["cookieConsent"]);
+  console.log(cookies);
   return (
     <>
       <Helmet>
@@ -29,7 +30,7 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
       </Helmet>
-      {!cookies.cookieConsent && <CookieConsent />}
+      {!cookies?.cookieConsent && <CookieConsent />}
       <Header />
       
       <main
