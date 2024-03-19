@@ -4,6 +4,11 @@
     cursor: pointer;
 }
 
+.root svg {
+    width: 189px;
+    height:35px
+}
+
 @media (max-width: 800px) {
     .root svg {
         width: 90px;
