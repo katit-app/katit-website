@@ -12,14 +12,16 @@
 }
 
 .mobilePagination {
-    width: 36px;
+    width: 12px;
     height: 12px;
-    border-bottom: 2px solid var(--grey-passthough);
+    border: 2px solid var(--grey-passthough);
     margin-right: 16px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .customDots :global(.slick-active) > .mobilePagination{
-    border-bottom: 2px solid var(--standard-black);
+    background-color: var(--grey-passthough);
   }
 
 .spacing :global(.slick-list) {
