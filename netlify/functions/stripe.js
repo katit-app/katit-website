@@ -1,7 +1,6 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 exports.handler = async (event, context) => {
-  console.log(event);
   const items = JSON.parse(event.body).map(x => ({
     price_data: {
       currency: "pln",
@@ -30,9 +29,8 @@ exports.handler = async (event, context) => {
     line_items: items,
     mode: "payment",
     success_url: "https://peppy-pixie-2d0b01.netlify.app/orderConfirm",
-    cancel_url: "https://peppy-pixie-2d0b01.netlify.app/pidr",
+    cancel_url: "https://peppy-pixie-2d0b01.netlify.app/paymentCancelled",
   });
-  console.log(session);
   return {
     statusCode: 200,
     body: JSON.stringify({
