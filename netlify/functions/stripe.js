@@ -1,7 +1,7 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 exports.handler = async (event, context) => {
-  console.log(context);
+  console.log(event);
   const session = await stripe.checkout.sessions.create({
     shipping_address_collection: {
         allowed_countries: [ "PL", "BY", "LT", "LV", "US", "FR", "NL", "ES", "IE", "PT", "IT", "EE", "DK", "NO", "SE", "FI"]
