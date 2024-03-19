@@ -7,13 +7,14 @@ import CurrencyFormatter from '../CurrencyFormatter';
 
 import * as styles from './OrderSummary.module.css';
 //const stripePromise = loadStripe("pk_test_51OvI4D032ruonfUmBz6Jki7mY6EQrbcJ8KEeODjJ490f7OVP99nWTEKhTxuAB9N9H4oYw1GftHocrpIhjn7EgpnX000vEpgpok");
-const OrderSummary = ({subtotal, shipping}) => {
+const OrderSummary = ({subtotal, shipping, items}) => {
   const [coupon, setCoupon] = useState('');
   const [giftCard, setGiftCard] = useState('');
 
   const onSubmit = () => {
     fetch("/api/stripe", {
       method: "POST",
+      body: JSON.stringify(items),
     })
       .then(function (response) {
         console.log(response);
