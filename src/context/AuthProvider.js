@@ -3,7 +3,7 @@ import { navigate } from 'gatsby';
 import GoTrue from 'gotrue-js';
 
 const auth = new GoTrue({
-    APIUrl: 'https://peppy-pixie-2d0b01.netlify.app/.netlify/identity',
+    APIUrl: 'https://katit.store/.netlify/identity',
     audience: '',
     setCookie: false,
   });
