@@ -35,7 +35,7 @@ const ProductPage = ({pageContext}) => {
   const [activeSize, setActiveSize] = useState(sampleProduct?.sizeOptions[0] || "S");
   //const suggestions = generateMockProductData(4);
   
-  const [gallery, setGallery] = useState(!sampleProduct.gallery ? [{image: sampleProduct.image}] : (Array.isArray(sampleProduct.gallery[0]) ? sampleProduct.gallery[0] : sampleProduct.gallery));
+  const [gallery, setGallery] = useState(!sampleProduct?.gallery ? [{image: sampleProduct?.image}] : (Array.isArray(sampleProduct.gallery[0]) ? sampleProduct.gallery[0] : sampleProduct.gallery));
   const addToBag = () => {
     cartCtx.addItem({...sampleProduct, size: activeSize, color: activeSwatch, amount: qty });
     showNotification(sampleProduct);
