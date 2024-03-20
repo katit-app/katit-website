@@ -93,6 +93,8 @@ html, body {
   font-size: 16px; /* BASE FONT SIZE */
   line-height: 1.5em;
   font-weight: 400;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 * [data-button] {
