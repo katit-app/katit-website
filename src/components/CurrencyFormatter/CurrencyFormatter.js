@@ -4,7 +4,7 @@ import { isNumeric } from '../../helpers/general';
 
 const CurrencyFormatter = ({
   amount,
-  currency = 'USD',
+  currency = 'PLN',
   appendZero = false,
   useDollar = false,
 }) => {
@@ -27,7 +27,7 @@ const CurrencyFormatter = ({
   let formattedPrice = formatObject.format(displayAmount);
   if ('formatToParts' in formatObject) {
     const formattedPriceParts = formatObject.formatToParts(displayAmount);
-    if (useDollar === false) symbol = '€' //formattedPriceParts[0].value;
+    if (useDollar === false) symbol = 'zł' //formattedPriceParts[0].value;
     const currencyValue = formattedPriceParts.find(
       (obj) => obj.type === 'currency'
     );

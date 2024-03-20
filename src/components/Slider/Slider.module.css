@@ -21,7 +21,8 @@
 }
 
 .customDots :global(.slick-active) > .mobilePagination{
-    background-color: var(--grey-passthough);
+    background-color: #6E001D;
+    border-color: #6E001D;
   }
 
 .spacing :global(.slick-list) {

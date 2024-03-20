@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import * as styles from './sample.module.css';
 
 import Accordion from '../../components/Accordion';
@@ -34,11 +34,19 @@ const ProductPage = ({pageContext}) => {
   );
   const [activeSize, setActiveSize] = useState(sampleProduct?.sizeOptions[0] || "S");
   //const suggestions = generateMockProductData(4);
-
+  
+  const [gallery, setGallery] = useState(!sampleProduct.gallery ? [{image: sampleProduct.image}] : (Array.isArray(sampleProduct.gallery[0]) ? sampleProduct.gallery[0] : sampleProduct.gallery));
   const addToBag = () => {
     cartCtx.addItem({...sampleProduct, size: activeSize, color: activeSwatch, amount: qty });
     showNotification(sampleProduct);
   };
+
+  useEffect(() => {
+    if(!sampleProduct.gallery || !Array.isArray(sampleProduct.gallery[0])) return;
+
+    const idx = Math.max(sampleProduct?.colorOptions.findIndex(x => x.color === activeSwatch.color), 0);
+    setGallery(sampleProduct.gallery[idx]);
+  }, [activeSwatch]);
 
   return sampleProduct && (
     <Layout>
@@ -52,7 +60,7 @@ const ProductPage = ({pageContext}) => {
           />
           <div className={styles.content}>
             <div className={styles.gallery}>
-              <Gallery images={sampleProduct.gallery || [{image: sampleProduct.image}]} />
+              <Gallery images={gallery} />
               {/* <div><span className={styles.vendor}>{sampleProduct.description}</span></div> */}
             </div>
             <div className={styles.details}>
@@ -112,7 +120,7 @@ const ProductPage = ({pageContext}) => {
 
               <div className={styles.description}>
                 <p>{sampleProduct.description}</p>
-                <span>Product code: {sampleProduct.productCode}</span>
+                {/* <span>Product code: {sampleProduct.productCode}</span> */}
               </div>
 
               <div className={styles.informationContainer}>
@@ -122,7 +130,7 @@ const ProductPage = ({pageContext}) => {
                   title={'composition & care'}
                 >
                   <p className={styles.information}>
-                    {sampleProduct.description}
+                    {sampleProduct.materials}
                   </p>
                 </Accordion>
                 <Accordion

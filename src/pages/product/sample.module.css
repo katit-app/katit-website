@@ -136,6 +136,7 @@
 .information {
     font-size: 12px;
     line-height: 18px;
+    white-space: pre;
 }
 
 .suggestionContainer {

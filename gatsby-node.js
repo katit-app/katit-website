@@ -1,6 +1,5 @@
 // https://stackoverflow.com/questions/63124432/how-do-i-configure-mini-css-extract-plugin-in-gatsby
 const products = require('./src/helpers/product.json');
-//import ProductPage from './src/pages/product/sample';
 exports.onCreateWebpackConfig = (helper) => {
   const { stage, actions, getConfig } = helper;
   if (stage === 'develop' || stage === 'build-javascript') {
