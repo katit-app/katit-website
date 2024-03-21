@@ -27,7 +27,7 @@
             
         ],
         "materials": "100% wool",
-        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+        "description": "Maxi skirt for a date with the spring park. The material the skirt is 100% wool - feels so pleasantly soft against the skin that it allows you to feel the spring with your skin."
     },
     {
         "name": "Asymmetrical vest",
@@ -51,14 +51,14 @@
         ],
         "sizeOptions": ["XS-S", "M-L"],
         "materials": "100% wool",
-        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+        "description": "This vest is your reliable companion for a workday in the office and an evening after work. Made of 100% wool, its design and quality accentuate your professionalism throughout the day, and afterward, it effortlessly transforms into a stylish addition to your everyday wardrobe. So don't hesitate to invite a colleague for a leisurely date after work."
 
     },
     {
-        "name": "Fleecy jacket",
-        "link": "fleecy-jacket",
+        "name": "Fuzzy jacket",
+        "link": "fuzzy-jacket",
         "price": 1340,
-        "alt": "Fleecy jacket",
+        "alt": "Fuzzy jacket",
         "image": "/products/68.jpg",
         "tags": ["jacket"],
         "colorOptions": [
@@ -74,7 +74,7 @@
         ],
         "sizeOptions": ["One size"],
         "materials": "Shell: \n65% wo\n20% pa\n15% mohair\nLining: \n100% viscose",
-        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+        "description": "Fuzzy jacket for a date in cloudy weather. Good weather isn't always sunny; you understand this when you step out to meet the fog, grab a cup of hot coffee, and sink into comfort."
 
     },
     {
@@ -112,7 +112,7 @@
         "meta": "+ 2 colors",
         "sizeOptions": ["One size"],
         "materials": "41% wo\n55% pe\n4% li",
-        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+        "description": "Oversized checkered shirt for a date with yourself. Imagine: an evening, a cozy corner at home, the aroma of freshly baked cookies, and your favorite movie on the screen. This is a date with yourself - a time when you give yourself well-deserved rest and care. Enjoy the moment, immerse yourself in your thoughts, allow yourself to be yourself without any expectations or demands. This is a moment when you can be inspired, relax, and enjoy your own company. The best date is a date with yourself."
     },
     {
         "name": "Pleated trousers",
@@ -138,7 +138,7 @@
         ],
         "sizeOptions": ["XS-S", "M-L"],
         "materials": "65% viscose\n35% lyocell",
-        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+        "description": "Pleated trousers for a date with your favorite artist at his concert. You can be as uninhibited as possible on the dance floor, as the trousers are comfortable, with concealed soft seams, and will attract attention with their beautiful shimmer, reflecting the flashes."
     },
     {
         "name": "Open back shirt",
@@ -162,7 +162,7 @@
         ],
         "sizeOptions": ["One size"],
         "materials": "65% viscose\n35% lyocell",
-        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+        "description": "Open-back shirt for a date with the sunset by the ocean. The shirt will cover slightly sunburnt shoulders from the day under the sun, but will leave the back open for the pleasant breeze and the sunset rays."
     }
 
   ]
