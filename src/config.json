@@ -27,8 +27,8 @@
       "subTitle": "Info",
       "links": [
         {
-          "text": "About Us",
-          "link": "/about"
+          "text": "Terms & Conditions",
+          "link": "/support#terms"
         },
         {
           "text": "Privacy Policy",
