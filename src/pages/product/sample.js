@@ -141,7 +141,7 @@ const ProductPage = ({pageContext}) => {
                   title={'delivery & returns'}
                 >
                   <p className={styles.information}>
-                    You can see our retur rules <Link to="/support#returns">here.</Link>
+                    You can see our return rules <Link to="/support#returns">here.</Link>
                   </p>
                 </Accordion>
                 {/* <Accordion type={'plus'} customStyle={styles} title={'help'}>
