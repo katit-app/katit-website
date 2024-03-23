@@ -4,104 +4,17 @@ import * as styles from './Policy.module.css';
 const Policy = (props) => {
   return (
     <div className={styles.root}>
-      {/* <div className={styles.section}>
-        <h3>1. Lorem Ipsum</h3>
+      <div className={styles.section}>
+        <h3>1. Privacy Policy</h3>
         <p>
-          Delaware limited liability company (The Sydney) collects personal
-          information that you voluntarily provide when applying or registering
-          for an account with The Upside or making a purchase on The Upside
-          website; www.theupside.com (the Website).
-        </p>
-        <p>
-          This Privacy Policy (Privacy Policy) outlines how your information is
-          collected, used and disclosed when you access or use our Services as
-          defined in our Terms. This information is collected, used and
-          disclosed in accordance with the Privacy Act 1988 (Cth) (Privacy Act).{' '}
-        </p>
-        <p>
-          This Privacy Policy is incorporated by reference into our Terms. Any
-          capitalized terms not defined in this Policy are defined in the Terms.
-          You agree to comply with all Terms when accessing or using our
-          Services, including this Privacy Policy.
+          Our top priority is to protect information and respect your privacy as you use our Website 
+          so we take care of appropriate security measures and your convenience of using our websites. 
+          This Policy lays down the rules and scope of our processing of your data and your related rights and responsibilities.
         </p>
       </div>
 
       <div className={styles.section}>
-        <h3>2. Lorem Ipsum</h3>
-        <p>
-          Our Services, including but not limited to the registration of an
-          account with us or placing of an order, is not intended to be used by
-          children under the age of 13. When a visitor indicates an age under
-          13, the registration process for The Upside website cannot be
-          completed, and no personally identifying information is collected in
-          conjunction with that attempted submission except that we retain
-          e-mail addresses of such persons (and record of access attempts) for
-          purposes of denying registration. Otherwise, we do not knowingly
-          collect personally identifiable information from visitors under the
-          age of 13.
-        </p>
-        <p>
-          If you are under 18, any use of our Services must be with the
-          involvement of a parent or guardian. By accessing or using our
-          Website, you warrant and represent to us that you are over the age of
-          18 years and you have the right, authority and legal capacity to enter
-          into a legally binding agreement and to abide by this Privacy Policy.{' '}
-        </p>
-        <p>
-          The Upside collects, uses and discloses information regarding users
-          aged 13-18 in the same manner as it does for adults.{' '}
-        </p>
-      </div>
-
-      <div className={styles.section}>
-        <h3>3. Lorem Ipsum</h3>
-        <p>
-          You must only use our Services in accordance with this Privacy Policy
-          and any applicable law or regulations. You agree to refrain from
-          undertaking any prohibited acts as set out in this Clause 3. You must
-          not (or attempt to):{' '}
-        </p>
-        <p>
-          (a) interfere with or disrupt the use of Services or the website, in
-          any manner including but not limited to the servicers or networks that
-          host the website;{' '}
-        </p>
-        <p>(b) stalk, harass, threaten, intimidate or harm another; </p>
-        <p>
-          (c) pretend to be anyone, or any entity, you are not, you will not
-          impersonate or misrepresent yourself as another person (including
-          celebrities), entity, a The Upside employee, or a civic or government
-          leader, or otherwise misrepresent your affiliation with a person or
-          entity. The Upside reserves the right to reject or block any user
-          which could be deemed to be an impersonation or misrepresentation of
-          your identity, or a misappropriation of another person's name or
-          identity;{' '}
-        </p>
-        <p>
-          (d) engage in any copyright infringement or other intellectual
-          property infringement, or disclose any trade secret or confidential
-          information in violation of a confidentiality, employment, or
-          non-disclosure agreement or otherwise;{' '}
-        </p>
-        <p>
-          (e) use, distribute, reproduce or commercialize any content from the
-          Website or The Upside service except as permitted by this Policy, by
-          law, and with prior written agreement from The Upside;{' '}
-        </p>
-        <p>
-          (f) transmit any unsolicited advertising, promotional material or
-          other forms of solicitation in connection with your use of the Service
-          without the prior written agreement of The Upside;{' '}
-        </p>
-        <p>
-          (g) forge any TCP-IP packet header or any part of the header
-          information or otherwise putting Information in a header designed to
-          mislead recipients as to the origin of any content transmitted through
-          the Website ("spoofing";);
-        </p>
-      </div> */}
-      <div className={styles.section}>
-        <h3>1. Info & cookies</h3>
+        <h3>2. Info & cookies</h3>
         <p>
           At our website, we use cookies to enhance your browsing experience and 
           provide you with personalized content and services. Cookies are small text 
@@ -122,6 +35,49 @@ const Policy = (props) => {
           which outlines how we collect, use, and protect your personal information. We only 
           collect data that is necessary to provide you with the best possible user experience 
           and to improve our website's performance.
+        </p>
+      </div>
+      <div className={styles.section}>
+        <h3>3. Rights of data subjects</h3>
+        <p>
+          In connection with personal data processing, you have the right to:
+        </p>
+        <p>
+          3.1 Delete your account on your own by requesting the account deletion procedure via email.
+        </p>
+        <p>
+          3.2 Erase your data without giving the reason why; it may, as the case may be, result in the deletion of your account on the Website.
+        </p>
+        <p>
+          3.3 Object to the processing of your data in whole or in part and for a specific purpose.
+        </p>
+        <p>
+          3.4 Correct or rectify your personal data.
+        </p>
+        <p>
+          3.5 Transfer your data to another entity. To this end, you may contact us through the contact form, 
+          specifying the name and address of the entity to which we are to transfer your data and the scope of the data – 
+          i.e. specify which information we are to transfer. The transfer will take place electronically once your request is confirmed. 
+          This is necessary to guarantee the security of such data and to confirm that the request comes specifically from you
+        </p>
+        <p>
+          3.6 Be informed about the scope of personal data processing.
+        </p>
+        <p>
+          3.7 Lodge a complaint with a personal data supervisory authority; 
+          in Poland this is the President of the Data Protection Office, address: Urząd Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.
+        </p>
+      </div>
+      <div className={styles.section}>
+        <h3>4. Communications related to personal data</h3>
+        <p>
+        You can send us any notices or requests related to personal data using a channel of your choice:
+        </p>
+        <p>
+          4.1 Email to: catherine.ekt@gmail.com.
+        </p>
+        <p>
+          4.2 Phone call to: +48 516 290 866.
         </p>
       </div>
     </div>

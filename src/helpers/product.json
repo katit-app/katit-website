@@ -4,7 +4,7 @@
         "link": "maxi-skirt",
         "name": "Maxi skirt",
         "vendor": "Katit",
-        "price": 750,
+        "price": 780,
         "alt": "Maxi skirt",
         "image": "/products/72.jpg",
         "colorOptions": [
@@ -117,7 +117,7 @@
     {
         "name": "Pleated trousers",
         "link": "pleated-trousers",
-        "price": 500,
+        "price": 700,
         "alt": "Pleated trousers",
         "image": "/products/24.jpg",
         "tags": ["trousers"],
@@ -143,7 +143,7 @@
     {
         "name": "Open back shirt",
         "link": "open-back-shirt",
-        "price": 700,
+        "price": 800,
         "alt": "Open back shirt",
         "image": "/products/48.jpg",
         "tags": ["trousers"],
