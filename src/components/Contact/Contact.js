@@ -45,7 +45,7 @@ const Contact = (props) => {
       <div className={styles.section}>
         <h4>Email</h4>
         <p>
-          You can email us at catherine.ekt@gmail.com
+          You can email us at katit.store@gmail.com
         </p>
       </div>
 

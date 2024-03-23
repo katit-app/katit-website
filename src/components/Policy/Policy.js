@@ -74,7 +74,7 @@ const Policy = (props) => {
         You can send us any notices or requests related to personal data using a channel of your choice:
         </p>
         <p>
-          4.1 Email to: catherine.ekt@gmail.com.
+          4.1 Email to: katit.store@gmail.com.
         </p>
         <p>
           4.2 Phone call to: +48 516 290 866.
