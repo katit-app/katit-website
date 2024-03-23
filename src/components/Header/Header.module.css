@@ -226,6 +226,16 @@
     }
 
     .burgerIcon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .burgerIconClosed {
+        display: flex;
+        align-items: center;
+    }
+
+    .burgerIconClosed svg {
         width: 20px;
         height: 20px;
     }

@@ -118,7 +118,7 @@ const Header = (prop) => {
               setMobileMenu(!mobileMenu);
               // setDepth(0);
             }}
-            className={styles.burgerIcon}
+            className={mobileMenu === true ? styles.burgerIconClosed : styles.burgerIcon}
           >
             <Icon symbol={`${mobileMenu === true ? 'cross' : 'burger'}`}></Icon>
           </div>
