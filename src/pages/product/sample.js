@@ -1,5 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import * as styles from './sample.module.css';
+import { Link } from 'gatsby';
+
 
 import Accordion from '../../components/Accordion';
 import AdjustItem from '../../components/AdjustItem';
@@ -13,9 +15,9 @@ import SizeList from '../../components/SizeList';
 import SwatchList from '../../components/SwatchList';
 import Layout from '../../components/Layout/Layout';
 
-import { generateMockProductData } from '../../helpers/mock';
+// import { generateMockProductData } from '../../helpers/mock';
 import Icon from '../../components/Icons/Icon';
-import ProductCardGrid from '../../components/ProductCardGrid';
+// import ProductCardGrid from '../../components/ProductCardGrid';
 //import { navigate } from 'gatsby';
 
 import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
@@ -139,7 +141,7 @@ const ProductPage = ({pageContext}) => {
                   title={'delivery & returns'}
                 >
                   <p className={styles.information}>
-                    {sampleProduct.description}
+                    You can see our retur rules <Link to="/support#returns">here.</Link>
                   </p>
                 </Accordion>
                 {/* <Accordion type={'plus'} customStyle={styles} title={'help'}>

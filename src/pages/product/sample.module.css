@@ -139,6 +139,10 @@
     white-space: pre;
 }
 
+.information > a {
+    text-decoration: underline;
+}
+
 .suggestionContainer {
     margin-top: 80px;
 }
