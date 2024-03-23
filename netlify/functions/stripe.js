@@ -28,8 +28,8 @@ exports.handler = async (event, context) => {
     },
     line_items: items,
     mode: "payment",
-    success_url: "https://peppy-pixie-2d0b01.netlify.app/orderConfirm",
-    cancel_url: "https://peppy-pixie-2d0b01.netlify.app/paymentCancelled",
+    success_url: "https://katit.store/orderConfirm",
+    cancel_url: "https://katit.store/paymentCancelled",
   });
   return {
     statusCode: 200,
