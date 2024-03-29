@@ -26,6 +26,9 @@ exports.handler = async (event, context) => {
     shipping_address_collection: {
         allowed_countries: [ "PL", "BY", "LT", "LV", "US", "FR", "NL", "ES", "IE", "PT", "IT", "EE", "DK", "NO", "SE", "FI"]
     },
+    phone_number_collection : {
+      enabled: true,
+    },
     line_items: items,
     mode: "payment",
     success_url: "https://katit.store/orderConfirm",
