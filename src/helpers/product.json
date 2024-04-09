@@ -87,7 +87,7 @@
         "colorOptions": [
             {"color": "#dddddd", "title": "Grey"},
             {"color": "#B9CFF0", "title": "Blue Asymmetric"},
-            {"color": "#23395d", "title": "Dark Blue"}
+            {"color": "#23395d", "title": "Dark Blue", "soldout" : true }
         ],
         "gallery": [
             [

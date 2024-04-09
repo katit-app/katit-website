@@ -39,6 +39,7 @@ const ProductPage = ({pageContext}) => {
   
   const [gallery, setGallery] = useState(!sampleProduct?.gallery ? [{image: sampleProduct?.image}] : (Array.isArray(sampleProduct.gallery[0]) ? sampleProduct.gallery[0] : sampleProduct.gallery));
   const addToBag = () => {
+    if(activeSwatch.soldout) return;
     cartCtx.addItem({...sampleProduct, size: activeSize, color: activeSwatch, amount: qty });
     showNotification(sampleProduct);
   };
@@ -68,7 +69,6 @@ const ProductPage = ({pageContext}) => {
             <div className={styles.details}>
               <h1>{sampleProduct.name}</h1>
               <span className={styles.vendor}> by Katit</span>
-
               <div className={styles.priceContainer}>
                 <CurrencyFormatter appendZero amount={sampleProduct.price} />
               </div>
@@ -101,7 +101,7 @@ const ProductPage = ({pageContext}) => {
                     fullWidth
                     level={'primary'}
                   >
-                    Add to Bag
+                    { activeSwatch.soldout ? 'Sold out' : 'Add to Bag'}
                   </Button>
                 </div>
                 <div

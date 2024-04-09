@@ -60,8 +60,8 @@ const QuickView = (props) => {
           />
         </div>
 
-        <Button onClick={() => handleAddToBag()} fullWidth level={'primary'}>
-          {buttonTitle}
+        <Button onClick={() => !activeSwatch.soldout && handleAddToBag()} fullWidth level={'primary'}>
+          {activeSwatch.soldout ? 'Sold out' : buttonTitle}
         </Button>
       </div>
     </div>
