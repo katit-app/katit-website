@@ -113,56 +113,5 @@
         "sizeOptions": ["One size"],
         "materials": "41% wo\n55% pe\n4% li",
         "description": "Oversized checkered shirt for a date with yourself. Imagine: an evening, a cozy corner at home, the aroma of freshly baked cookies, and your favorite movie on the screen. This is a date with yourself - a time when you give yourself well-deserved rest and care. Enjoy the moment, immerse yourself in your thoughts, allow yourself to be yourself without any expectations or demands. This is a moment when you can be inspired, relax, and enjoy your own company. The best date is a date with yourself."
-    },
-    {
-        "name": "Pleated trousers (pre-order)",
-        "link": "pleated-trousers",
-        "price": 700,
-        "alt": "Pleated trousers",
-        "image": "/products/24.jpg",
-        "tags": ["trousers"],
-        "colorOptions": [
-            {"color": "#141414", "title": "Dark Grey"}
-        ],
-        "gallery": [
-            {"image": "/products/24.jpg", "alt": "trousers"},
-            {"image": "/products/54.jpg", "alt": "trousers"},
-            {"image": "/products/55.jpg", "alt": "trousers"},
-            {"image": "/products/51.jpg", "alt": "trousers"},
-            {"image": "/products/48.jpg", "alt": "trousers"},
-            {"image": "/products/45.jpg", "alt": "trousers"},
-            {"image": "/products/42.jpg", "alt": "trousers"},
-            {"image": "/products/43.jpg", "alt": "trousers"},
-            {"image": "/products/29.jpg", "alt": "trousers"},
-            {"image": "/products/27.jpg", "alt": "trousers"}        
-        ],
-        "sizeOptions": ["XS-S", "M-L"],
-        "materials": "65% viscose\n35% lyocell",
-        "description": "Pleated trousers for a date with your favorite artist at his concert. You can be as uninhibited as possible on the dance floor, as the trousers are comfortable, with concealed soft seams, and will attract attention with their beautiful shimmer, reflecting the flashes."
-    },
-    {
-        "name": "Open back shirt (pre-order)",
-        "link": "open-back-shirt",
-        "price": 800,
-        "alt": "Open back shirt",
-        "image": "/products/48.jpg",
-        "tags": ["trousers"],
-        "colorOptions": [
-            {"color": "#141414", "title": "Dark Grey"}
-        ],
-        "gallery": [
-            {"image": "/products/48.jpg", "alt": "trousers"},
-            {"image": "/products/45.jpg", "alt": "trousers"},
-            {"image": "/products/43.jpg", "alt": "trousers"},
-            {"image": "/products/41.jpg", "alt": "trousers"},
-            {"image": "/products/39.jpg", "alt": "trousers"},
-            {"image": "/products/38.jpg", "alt": "trousers"},
-            {"image": "/products/36.jpg", "alt": "trousers"},
-            {"image": "/products/40.jpg", "alt": "trousers"}       
-        ],
-        "sizeOptions": ["One size"],
-        "materials": "65% viscose\n35% lyocell",
-        "description": "Open-back shirt for a date with the sunset by the ocean. The shirt will cover slightly sunburnt shoulders from the day under the sun, but will leave the back open for the pleasant breeze and the sunset rays."
     }
-
   ]
