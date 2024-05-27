@@ -3,7 +3,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET);
 exports.handler = async (event, context) => {
   const items = JSON.parse(event.body).map(x => ({
     price_data: {
-      currency: "pln",
+      currency: "eur",
       product_data: {
         name: x.name,
         description: `size: ${x.size}, color: ${x.color.title}`,
@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
   }));
   items.push({
     price_data: {
-      currency: "pln",
+      currency: "eur",
       product_data: {
         name: "shipment",
       },
