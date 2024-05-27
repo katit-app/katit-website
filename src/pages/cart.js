@@ -50,7 +50,7 @@ const CartPage = (props) => {
               <div className={styles.cartItemsContainer}>
                 {state?.map((item, index) => (<CartItem {...item} color={item.color.title} index={index} />))}
               </div>
-              <OrderSummary subtotal={getTotal()} shipping={20} items={state} />
+              <OrderSummary subtotal={getTotal()} shipping={5} items={state} />
             </div>
           </div>
         </Container>
