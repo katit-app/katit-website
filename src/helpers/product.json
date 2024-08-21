@@ -85,7 +85,7 @@
         "image": "/products/12.jpg",
         "tags": ["shirt"],
         "colorOptions": [
-            {"color": "#dddddd", "title": "Grey"},
+            {"color": "#dddddd", "title": "Grey", "soldout" : true },
             {"color": "#B9CFF0", "title": "Blue Asymmetric"},
             {"color": "#23395d", "title": "Dark Blue", "soldout" : true }
         ],

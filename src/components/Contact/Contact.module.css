@@ -41,6 +41,11 @@
     margin-top: 32px;
 }
 
+.section ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
 @media (max-width: 800px) {
     .contactForm {
         grid-template-columns: 1fr;
