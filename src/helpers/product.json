@@ -62,7 +62,7 @@
         "image": "/products/68.jpg",
         "tags": ["jacket"],
         "colorOptions": [
-            {"color": "#D8BCAB", "title": "Warm Beige"}
+            {"color": "#D8BCAB", "title": "Warm Beige", "soldout": true }
         ],
         "gallery": [
             {"image": "/products/65.jpg", "alt": "jacket"},
@@ -86,7 +86,7 @@
         "tags": ["shirt"],
         "colorOptions": [
             {"color": "#dddddd", "title": "Grey"},
-            {"color": "#B9CFF0", "title": "Blue Asymmetric"},
+            {"color": "#B9CFF0", "title": "Blue Asymmetric", "soldout": true },
             {"color": "#23395d", "title": "Dark Blue", "soldout" : true }
         ],
         "gallery": [
